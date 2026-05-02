@@ -21,10 +21,10 @@ class Herbivore(Animal):
 
     def __init__(self,
                  name: str,
-                 hidden: bool = False):
+                 hidden: bool = False) -> None:
         super().__init__(name, hidden)
 
-    def hide(self) -> bool:
+    def hide(self) -> None:
         self._hidden = not self._hidden
 
 
@@ -32,7 +32,7 @@ class Carnivore(Animal):
 
     def __init__(self,
                  name: str,
-                 hidden: bool = False):
+                 hidden: bool = False) -> None:
         super().__init__(name, hidden)
 
     def bite(self, animal: Animal) -> None:
